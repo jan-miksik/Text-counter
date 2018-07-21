@@ -1,0 +1,129 @@
+$col_main: black; 
+$col_bg: white; 
+$col_link: #007801;
+$col_visited: #228B22; //#21BA00; //#007801; //
+$col_hover: #21BA00; // #21BA00;
+
+
+    body {
+        margin: 0;
+        background-color: $col_bg;
+        color: $col_main;
+        font-family: Verdana, sans-serif;
+    }
+
+    a:link {
+        text-decoration: none;
+        color: $col_link;
+    }
+
+    a:visited {
+        color: $col_visited;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: $col_hover;
+
+        -webkit-transition: all .5s;
+        -moz-transition: all .5s;
+        -o-transition: all .5s;
+        transition: all .2s;
+    }
+
+    h1,
+    h2 {
+        font-weight: 500;
+        padding: 0;
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 2.1rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    section {
+        // position: relative;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 1em;
+        max-width: 900px;
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    article {
+
+        display: inline-block;
+        margin: 0 0 1em 0;
+        max-width: 600px;
+        font-size: 1.15rem;
+        hyphens: auto;
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+    }
+
+    address {
+        font-style: normal;
+    }
+
+    footer {
+        background-color: $col_bg;
+        text-align: center; //font-family: sans-serif;
+        font-size: 1.35rem;
+        padding: 0 0 3em 0;
+        padding-top: 2em;
+    }
+
+    code {
+        background-color: #f0f0f0;
+        padding: 4px 7px;
+        margin: 0 3px;
+        font-size: 1.3rem;
+    }
+
+    #textArea {
+        width: 100%;
+        height: 12em;
+        margin-top: 0.5em;
+    }
+
+    #show,
+    #content {
+        display: block;
+        max-height: 0;
+        overflow: hidden;
+        -webkit-transition: -webkit-max-height 0.56s ease-out;
+        -o-transition: -o-max-height 0.56s ease-out;
+        -ms-transition: -ms-max-height 0.56s ease-out;
+        transition: max-height 0.7s ease-in-out;
+    }
+
+    #show {
+        display: none;
+    }
+
+    #show:checked~#content {
+        display: block;
+        opacity: 1;
+        max-height: 550px;
+        height: auto;
+    }
+
+    .toggle {
+        cursor: pointer;
+        color: blue;
+    }
+
+    .toggle::before {
+        content: 'More Info';
+    }
+
+    #show:checked~.toggle::before {
+        content: 'Less Info ';
+    }

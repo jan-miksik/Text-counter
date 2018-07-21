@@ -1,0 +1,12 @@
+{
+  "name": "example_web",
+  "version": "1.0.0",
+  "description": "z",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1", 
+    "start": "browser-sync start -s -f index.html --no-ui"
+  },
+  "author": "",
+  "license": "ISC"
+}
