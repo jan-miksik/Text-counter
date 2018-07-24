@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="nástroj pro analyzování textu" />
+    <meta name="keywords" content="text, counter, analýza, slova, řazení, open-source" />
+    <meta name="author" content="Jan Mikšík" />
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <title>Text counter</title>
+</head>
+
+<body>
+    <section class="about text_counter">
+        <h1>Text-counter</h1>
+        <a class="language" href="index.html" title="Anglická verze - english version">&nbsp;&nbsp;&vert;&nbsp;english</a>
+        <input type=checkbox id="show">
+        <h2>Analyzátor textu</h2>
+        <label for="show" class="toggle localLink"></label>
+        <a href="https://codepen.io/jan-miksik/pen/JBNzRJ" target="_blank">&nbsp;&nbsp; codepen</a>
+        <a href="https://github.com/jan-miksik/Text-counter" target="_blank">&nbsp;&nbsp; github</a>
+        
+        <span id="content">
+            <article>
+                Text-counter poskytuje přehled nakolik se jednotlivá slova opakují, počet unikátních slov, další statistiky a několik možností řazení. Další funkce je v plánu postupně přidávat. Jedná se o open-source projekt. Můžete následovat odkaz ke zdrojovému kódu na githabu nebo codepenu. Program je vytvořen hlavně v JavaScriptu a doplněný pomocí HTML a CSS.  
+                <br />
+                <br />
+                    <address>
+                        <em>&nbsp;jan.miksik@email.cz</em> <br />další práce a projekty na:
+                        <a href="http://miksikjan.tk/index_cz.html" target="_blank"> miksikjan.tk</a>
+                    </address>  
+
+            </article>
+
+        </span>
+        <textarea id="textArea" oninput="getText()">******* Tady patří text k analýze *******
+        </textarea>
+        <p id="statistic">
+        </p>
+        podmínky pro řazení:
+        <br />
+        <input type="radio" name="condition" value="none" checked /> žádné
+        <br />
+        <input type="radio" name="condition" value="alphabet" /> abecedně
+        <br />
+        <input type="radio" name="condition" value="by_length" /> podle délky
+        <br />
+        <input type="radio" name="condition" value="by_amount" /> podle množství
+        <br />
+        <input type="checkbox" name="reverseMode" value="reverse" id="reverseCheck" />obráceně
+        <p id="showWords">
+        </p>
+    </section>
+    <footer title="kontakt">
+        <address>jan.miksik@email.cz
+            <br /><a href="http://miksikjan.tk/index_cz.html" target="_blank"> miksikjan.tk</a></address>
+    </footer>
+    <script src="text_counter_cz.js"></script>
+</body>
+
+</html>

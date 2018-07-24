@@ -33,8 +33,8 @@ function getText() {
     words.forEach(function(x) { wordsObj[x] = (wordsObj[x] || 0) + 1; });
     make2DimArrays();
     amountOfWords = words.length;
-    statistic.innerHTML = "unique words: " + wordsArray.length + "<br>" + "words: " + amountOfWords + "<br>" +
-        "characters including spaces: " + str.length + "<br><br>";
+    statistic.innerHTML = "unikátních slov " + wordsArray.length + "<br>" + "slov: " + amountOfWords + "<br>" +
+        "znaků včetně mezer: " + str.length + "<br><br>";
     sortMain();
 }
 
@@ -98,7 +98,7 @@ function insert2DArrays() {
         
         
        
-        version in Czech
+        
 
         add function which dont count word when is just special symbol put down
         
@@ -107,6 +107,7 @@ function insert2DArrays() {
         statistic for characters
         average length of word
 
+        *version in Czech
         *make github for this
         *include this project to web
         *hover efects and text color

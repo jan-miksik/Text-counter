@@ -19,6 +19,16 @@ a:hover {
   -o-transition: all .5s;
   transition: all .2s; }
 
+.language {
+  position: absolute;
+  margin-top: 7px;
+  right: 20px;
+  text-transform: uppercase; }
+  .language:link, .language:visited {
+    color: #787878; }
+  .language:hover {
+    color: #3c3c3c; }
+
 h1,
 h2 {
   font-weight: 500;
@@ -26,10 +36,11 @@ h2 {
   margin: 0; }
 
 h1 {
-  font-size: 2.1rem; }
+  font-size: 1.7rem;
+  display: inline-block; }
 
 h2 {
-  font-size: 1.5rem; }
+  font-size: 1.3rem; }
 
 section {
   display: block;
@@ -42,9 +53,10 @@ section {
 
 article {
   display: inline-block;
-  margin: 0 0 1em 0;
+  margin: 0.5em 0 1em 0;
   max-width: 600px;
-  font-size: 1.15rem;
+  font-size: 1.2rem;
+  line-height: 1.9;
   hyphens: auto;
   -webkit-hyphens: auto;
   -ms-hyphens: auto; }
@@ -52,6 +64,32 @@ article {
 address {
   font-style: normal; }
 
+@media only screen and (min-width: 500px) {
+  section {
+    max-width: 80%; }
+
+  h1 {
+    font-size: 1.8rem; }
+
+  h2 {
+    font-size: 1.4rem; }
+
+  .language {
+    right: 10%;
+    text-transform: uppercase; } }
+@media only screen and (min-width: 900px) {
+  section {
+    max-width: 70%; }
+
+  h1 {
+    font-size: 2.1rem; }
+
+  h2 {
+    font-size: 1.5rem; }
+
+  .language {
+    right: 15%;
+    text-transform: uppercase; } }
 footer {
   background-color: white;
   text-align: center;
@@ -86,7 +124,7 @@ code {
 #show:checked ~ #content {
   display: block;
   opacity: 1;
-  max-height: 550px;
+  max-height: 650px;
   height: auto; }
 
 .toggle {
